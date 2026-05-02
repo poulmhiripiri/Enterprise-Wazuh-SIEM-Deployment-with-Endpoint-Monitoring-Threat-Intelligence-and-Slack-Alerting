@@ -1,0 +1,38 @@
+flowchart LR
+    subgraph Endpoints[Monitored Endpoints]
+        W10[Windows Endpoint]
+        WSVR[Windows Server]
+        LNX[Ubuntu/Linux Server]
+    end
+
+    subgraph WazuhPlatform[Wazuh SIEM Platform]
+        AGENTS[Wazuh Agents]
+        MANAGER[Wazuh Manager]
+        INDEXER[Wazuh Indexer]
+        DASHBOARD[Wazuh Dashboard]
+    end
+
+    subgraph Integrations[Security Integrations]
+        DEFENDER[Microsoft Defender Logs]
+        FIM[File Integrity Monitoring]
+        VT[VirusTotal Threat Intelligence]
+        VULN[Vulnerability Detection]
+    end
+
+    subgraph Response[Response & Collaboration]
+        SLACK[Slack Alerts Channel]
+        TICKETS[Optional ITSM Ticketing]
+    end
+
+    W10 --> AGENTS
+    WSVR --> AGENTS
+    LNX --> AGENTS
+    DEFENDER --> AGENTS
+    FIM --> AGENTS
+    VULN --> MANAGER
+    AGENTS --> MANAGER
+    MANAGER --> INDEXER
+    INDEXER --> DASHBOARD
+    MANAGER --> VT
+    MANAGER --> SLACK
+    SLACK --> TICKETS

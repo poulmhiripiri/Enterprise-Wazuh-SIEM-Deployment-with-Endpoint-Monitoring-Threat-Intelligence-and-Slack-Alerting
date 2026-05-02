@@ -1,0 +1,17 @@
+sequenceDiagram
+    participant Endpoint as Endpoint / Server
+    participant Agent as Wazuh Agent
+    participant Manager as Wazuh Manager
+    participant VT as VirusTotal
+    participant Dashboard as Wazuh Dashboard
+    participant Slack as Slack Channel
+    participant Analyst as Security Analyst
+
+    Endpoint->>Agent: Security event, file change, Defender alert, login failure
+    Agent->>Manager: Forward normalised event
+    Manager->>Manager: Decode, correlate, apply rules
+    Manager->>VT: Optional hash or indicator reputation lookup
+    VT-->>Manager: Reputation result
+    Manager->>Dashboard: Store and display alert
+    Manager->>Slack: Send high-value notification
+    Slack->>Analyst: Analyst receives alert and triages
