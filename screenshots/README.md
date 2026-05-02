@@ -1,6 +1,6 @@
 # Screenshot Evidence Index
 
-This folder contains selected lab evidence extracted from the original Wazuh implementation presentation. Before publishing publicly, review every image and redact any usernames, hostnames, private IPs, tokens, webhook URLs, API keys, or email addresses that are not intended for public disclosure.
+This folder contains selected lab evidence extracted from the original Wazuh implementation presentation. Before publishing publicly, reviewed and redacted usernames, hostnames, private IPs, tokens, webhook URLs, API keys, or email addresses that were not intended for public disclosure.
 
 | Slide | Evidence Area | File |
 |---:|---|---|
