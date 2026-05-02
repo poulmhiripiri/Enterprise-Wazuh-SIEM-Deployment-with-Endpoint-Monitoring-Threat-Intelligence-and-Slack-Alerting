@@ -159,4 +159,4 @@ This project demonstrates hands-on capability in deploying, integrating, and ope
 
 ## Disclaimer
 
-This project was built in a controlled lab environment for learning, demonstration, and portfolio purposes. Any screenshots should be reviewed and redacted before public release.
+This project was built in a controlled lab environment for learning, demonstration, and portfolio purposes. All screenshots shared do not represent a real system.
