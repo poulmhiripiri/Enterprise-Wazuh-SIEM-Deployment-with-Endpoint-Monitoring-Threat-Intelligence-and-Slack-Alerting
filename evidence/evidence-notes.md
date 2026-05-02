@@ -2,8 +2,6 @@
 
 The original Wazuh implementation was documented as a PowerPoint walkthrough. Selected evidence screenshots were extracted into the `screenshots/` folder for GitHub use.
 
-For public publishing, use only screenshots that demonstrate the technical result without exposing secrets or personal information.
-
 Recommended evidence categories:
 
 - Wazuh dashboard overview
